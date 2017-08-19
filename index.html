@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>BTC TX Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Jacopo Pace">
+
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosario:400,700">
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="./css/bootstrap-responsive.min.css">-->
+    <link type="text/css" rel="stylesheet" href="./css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/grayscale.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="icon" href="./img/favicon.ico">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">BTC</span> TX <span class="light">Visualizer</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#visual">Visual</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Author</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro bg" data-speed="5" data-type="background">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">BTC TX Visualizer</h1>
+
+                        <!--<p class="intro-text">-->
+                            <!--Lorem ipsum bla bla...-->
+                        <!--</p>-->
+
+                        <a href="#visual" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About</h2>
+                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Section -->
+    <section id="visual" class="content-section text-center">
+        <div class="visual-section bg" data-speed="8" data-type="background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="visualization">
+                        </div>
+
+                        <fieldset>
+                            <div class="text-center">
+                                <a id="disconnect" class="btn btn-primary btn-lg">Disconnect</a>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact The Author</h2>
+                <p>
+                    Feel free to contact me to provide feedbacks, ideas, donations,
+                    great job oportunities, whatever, or to just say hello!
+                </p>
+
+        <div id="btc-address" class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <b class="title">BTC address</b><br>
+                <b class="address">1Fo43sjgWtPH5qbwTfofnT9tAtpvRA44GB</b><br>
+                <img src="./img/qr.jpg" /><br>
+                <b class="donation">(donation)</b>
+            </div>
+        </div>
+                <p>
+                </p>
+
+                <p><a href="http://jacopo.im">Jacopo Pace</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://github.com/kolosseo" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/jacopo_pace" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>0x100.it 2017</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script type="text/javascript" src="./js/d3/d3.js"></script>
+    <script type="text/javascript" src="./js/d3/d3.geom.js"></script>
+    <script type="text/javascript" src="./js/d3/d3.layout.js"></script>
+    <script type="text/javascript" src="./js/CodeFlower.js"></script>
+    <script type="text/javascript" src="./js/dataConverter.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="./js/grayscale.min.js"></script>
+
+</body>
+
+</html>
