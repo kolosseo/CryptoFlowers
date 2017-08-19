@@ -95,7 +95,7 @@ var Ws = (function() {
 	api.onMessage = function(evt) {
 		var children = [];
 		var res = JSON.parse(evt.data);
-		const RATIO = 10000;
+		const RATIO = 1000000;
 		console.log('RESPONSE:', res);
 
 		if (api.waitTx && res.op === 'utx') {
