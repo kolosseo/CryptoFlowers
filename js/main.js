@@ -111,6 +111,10 @@ var Ws = (function() {
 					})
 				}
 
+                // keep the app lighter ;)
+                if (api.tx.children.length > 30)
+                    api.tx.children = [];
+
 				api.tx.children.unshift({
 					name: res.x.hash,
 					size: res.x.out[0].value / RATIO,
