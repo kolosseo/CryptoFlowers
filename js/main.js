@@ -39,7 +39,11 @@ var Ws = (function() {
 	api.websocket = null;
 	api.waitTx = false;
     api.isOpen = false;
-	api.lastTx = null;
+	api.tx = {
+        name: 'root',
+        size: 100,
+        children: []
+    };
 	api.output = null;
 	api.pingTimeout = null;
 	api.getTxTimeout = null;
@@ -96,22 +100,26 @@ var Ws = (function() {
 
 		if (api.waitTx && res.op === 'utx') {
 			api.waitTx = false;
-			if ((api.lastTx === null)
-			 || (api.lastTx.hash !== res.x.hash)) {
-				api.lastTx = res.x;
+            console.log('API.TX 1:', api.tx)
+			if ((api.tx.children.length === 0)
+			 || ((api.tx.children[0]) && (api.tx.children[0].hash !== res.x.hash))) {
 
-				for (var i = 0; i < api.lastTx.inputs.length; i++) {
+				for (var i = 0; i < res.x.inputs.length; i++) {
 					children.push({
-						name: api.lastTx.inputs[i].prev_out.addr,
-						size: api.lastTx.inputs[i].prev_out.value / RATIO
+						name: res.x.inputs[i].prev_out.addr,
+						size: res.x.inputs[i].prev_out.value / RATIO
 					})
 				}
 
-				currentCodeFlower.update({
-					name: api.lastTx.hash,
-					size: api.lastTx.out[0].value / RATIO,
+				api.tx.children.unshift({
+					name: res.x.hash,
+					size: res.x.out[0].value / RATIO,
 					children: children
 				});
+
+                console.log('API.TX 2:', api.tx)
+
+				currentCodeFlower.update(api.tx);
 			}
 			//else console.log('SAME TX');
 		}
