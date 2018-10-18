@@ -44,9 +44,8 @@ circle.node.collapsed {
 }
 
 .nodetext {
-  fill: #252929;
+  fill: #fefefe;
   font-weight: bold;
-  text-shadow: 0 0 0.2em white;
 }
 
 line.link {
