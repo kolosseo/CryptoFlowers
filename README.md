@@ -11,5 +11,3 @@ Consider this:
 - Every 30 transactions, the flower get renewed to avoid putting too much weight on the user browser.
 - Click the "disconnect/connect" button to close/open the websocket flow.
 - Demo actually available [here](https://flowers.jacopo.im)
-
-Feel free to play with it, the code is available <a target="_blank" href="https://github.com/kolosseo/CryptoFlowers">here</a>.
